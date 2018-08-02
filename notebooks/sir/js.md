@@ -2,4 +2,26 @@
 
 [Link to Observable notebook](http://beta.observablehq.com/@epichef/deterministic-sir-model)
 
-<iframe src="../../observables/deterministic-sir-model/index.html" onload="this.width=width;this.height=height;" frameBorder="0" scrolling="no"></iframe>
+<script type="application/javascript">
+
+function resizeIFrameToFitContent( iFrame ) {
+
+    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+}
+
+window.addEventListener('DOMContentLoaded', function(e) {
+
+    var iFrame = document.getElementById( 'iFrame1' );
+    resizeIFrameToFitContent( iFrame );
+
+    // or, to resize all iframes:
+    var iframes = document.querySelectorAll("iframe");
+    for( var i = 0; i < iframes.length; i++) {
+        resizeIFrameToFitContent( iframes[i] );
+    }
+} );
+
+</script>
+
+<iframe src="../../observables/deterministic-sir-model/index.html" frameBorder="0" scrolling="no"></iframe>
